@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import Home from './app/Home/Home';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNav(window.scrollY > (window.innerHeight - 65));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-container">
+        <NavBar show={showNav} />
+        <Home />
+      </div>
     </div>
   );
 }
