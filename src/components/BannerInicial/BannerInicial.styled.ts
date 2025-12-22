@@ -14,11 +14,4 @@ export const BannerInicialWrapper = styled.div`
     background-position: center; /* Centraliza a imagem */
     background-attachment: fixed; /* Mantém a imagem fixa durante o scroll */
     background-repeat: no-repeat; /* Evita repetição */
-
-`;
-
-export const BannerImage = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 `;
