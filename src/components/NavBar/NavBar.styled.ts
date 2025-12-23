@@ -20,12 +20,16 @@ export const NavBarWrapper = styled.nav<NavBarWrapperProps>`
   transform: translateY(${props => props.$show ? '0' : '-100%'}); /* Esconde/mostra com slide */
 `;
 
-export const NavLogo = styled.div`
-  margin-left: 20px; 
-  flex:1;
+export const NavLogoItem = styled.div`
+  margin-left: 20px;
+  flex: 1;
   align-items: center;
   justify-content: start;
   flex-direction: row !important;
+`;
+export const NavLogo = styled.img`
+  width: auto;
+  height: 40px;
 `;
 
 export const NavList = styled.ul`
@@ -40,6 +44,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  font-size: calc(8px + 1vmin);
   cursor: pointer;
   color: var(--text-color);
   width: fit-content;

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { NavBarWrapper, NavList, NavItem, NavLogo } from './NavBar.styled';
+import { NavBarWrapper, NavList, NavItem, NavLogo, NavLogoItem } from './NavBar.styled';
 import BarraBusca from '../BarraBusca/BarraBusca';
+import logoText from '../../assets/icons/logo texto.png';
 
 interface NavBarProps {
   show: boolean;
@@ -8,7 +9,9 @@ interface NavBarProps {
 
 const NavBar: FC<NavBarProps> = ({ show }) => (
   <NavBarWrapper $show={show} data-testid="NavBar">
-    <NavLogo>Logo</NavLogo>
+    <NavLogoItem>
+      <NavLogo src={logoText} alt="Logo Texto" />
+    </NavLogoItem>
     <div style={{ flex: 1 }}>
       <BarraBusca />
     </div>

@@ -62,6 +62,7 @@ export const BarraBuscaResultItem = styled.li`
 `;
 
 export const BarraBuscaErrorMessage = styled.div`
+  font-size: calc(10px + 0.5vmin);
   position: absolute;
   top: 100%;
   left: 0;
