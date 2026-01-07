@@ -19,7 +19,7 @@ const Home: FC<HomeProps> = () => {
    return (
       <HomeWrapper data-testid="Home">
          <BannerInicial />
-         <ContentWrapper hasPadding={hasPadding}>
+         <ContentWrapper $hasPadding={hasPadding}>
             Home Component
          </ContentWrapper>
       </HomeWrapper>

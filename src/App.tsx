@@ -21,6 +21,9 @@ function App() {
         <NavBar show={showNav} />
         <Home />
       </div>
+      <footer className="credits">
+        Icons by <a href="https://www.flaticon.com/authors/chanut" target="_blank" rel="noopener noreferrer">Chanut</a>
+      </footer>
     </div>
   );
 }
