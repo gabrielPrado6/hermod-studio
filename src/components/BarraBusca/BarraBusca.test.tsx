@@ -11,7 +11,7 @@ test('renders BarraBusca', () => {
 test('shows error on invalid search', () => {
   render(<BarraBusca />);
   const input = screen.getByPlaceholderText('O que está procurando');
-  const icon = screen.getByText('🔍');
+  const icon = screen.getByAltText('Buscar');
   fireEvent.change(input, { target: { value: 'invalid' } });
   fireEvent.click(icon);
   expect(screen.getByText('Nada encontrado. Tente outra busca.')).toBeInTheDocument();
