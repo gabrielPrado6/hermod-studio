@@ -34,6 +34,15 @@ const BarraBusca: FC<BarraBuscaProps> = ({ enableSticky = false }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
    }, []);
 
+   useEffect(() => {
+      const handleScroll = () => {
+         setResults([]);
+         setError('');
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+   }, []);
+
    const handleSearch = () => {
       setError('');
       setResults([]);

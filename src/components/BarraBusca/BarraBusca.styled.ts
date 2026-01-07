@@ -73,4 +73,5 @@ export const BarraBuscaErrorMessage = styled.div`
   border-radius: 8px;
   border: 1px solid #d8000c;
   z-index: 1000;
+  overflow-x: visible !important;
 `;

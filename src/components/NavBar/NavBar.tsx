@@ -12,7 +12,7 @@ const NavBar: FC<NavBarProps> = ({ show }) => (
     <NavLogoItem>
       <NavLogo src={logoText} alt="Logo Texto" />
     </NavLogoItem>
-    <div style={{ flex: 1 }}>
+    <div style={{ flex: 1, overflowX: 'visible' }}>
       <BarraBusca />
     </div>
     <NavList>
