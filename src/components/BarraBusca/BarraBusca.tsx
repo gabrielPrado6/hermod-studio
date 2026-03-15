@@ -54,7 +54,7 @@ const BarraBusca: FC<BarraBuscaProps> = ({ enableSticky = false }) => {
          contact: ['/contact'],
          blog: ['/blog/post1', '/blog/post2'], // Exemplo de múltiplos
       };
-
+      console.log(query.toLowerCase())
       const found = mockData[query.toLowerCase()];
       if (found) {
          if (found.length === 1) {
@@ -78,7 +78,7 @@ const BarraBusca: FC<BarraBuscaProps> = ({ enableSticky = false }) => {
       <BarraBuscaWrapper ref={wrapperRef} $isSticky={isSticky} data-testid="BarraBusca">
          <BarraBuscaInput
             type="text"
-            placeholder="O que está procurando"
+            placeholder="O que está procurando?"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyUp={handleKeyPress}
