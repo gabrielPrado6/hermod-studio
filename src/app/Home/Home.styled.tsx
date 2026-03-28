@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import './../../App.css';
 
 export const HomeWrapper = styled.div`
@@ -18,8 +19,9 @@ export const ContentWrapper = styled.div<{ $hasPadding: boolean }>`
   justify-content: start;
   width: 90%;
   min-height: 60vh;
-  padding: ${props => props.$hasPadding ? '80px 20px 20px 20px' : '20px'};
+  padding: ${props => props.$hasPadding ? '120px 20px 20px 20px' : '20px'};
   border-radius: 0 0 8px 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color:  var(--background-content);
+  margin-bottom: 4rem;
 `;

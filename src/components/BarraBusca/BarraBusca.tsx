@@ -17,7 +17,7 @@ const BarraBusca: FC<BarraBuscaProps> = ({ enableSticky = false }) => {
       if (!enableSticky) return;
 
       const handleScroll = () => {
-         setIsSticky(window.scrollY > (window.innerHeight / 2) && window.scrollY < window.innerHeight);
+         setIsSticky(window.scrollY > (window.innerHeight / 2) + 80 && window.scrollY < window.innerHeight);
       };
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);

@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowNav(window.scrollY > (window.innerHeight - 65));
+      setShowNav(window.scrollY > (window.innerHeight - 85));
     };
 
     window.addEventListener('scroll', handleScroll);

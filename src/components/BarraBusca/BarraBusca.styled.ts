@@ -3,7 +3,7 @@ import './../../App.css';
 
 export const BarraBuscaWrapper = styled.div<{ $isSticky?: boolean }>`
   position: ${props => props.$isSticky ? 'fixed' : 'relative'};
-  top:  ${props => props.$isSticky ? '20px' : '0'};
+  top:  ${props => props.$isSticky ? '8px' : '0'};
   width: 100%;
   max-width: 400px;
   overflow-x: visible !important;
